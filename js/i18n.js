@@ -58,7 +58,7 @@ const translations = {
     // About
     "about.label": "ABOUT ME",
     "about.title": "A Bit About Me",
-    "about.bio1": "I'm Pedro Duarte, a Full Stack Developer based in Orlando, FL, with a strong focus on building scalable web applications and integrating AI-powered solutions.",
+    "about.bio1": "I'm Pedro Duarte, a Full Stack Developer based in Campo Grande, MS - BR, with a strong focus on building scalable web applications and integrating AI-powered solutions.",
     "about.bio2": "With experience across the full development lifecycle from concept and architecture to deployment and optimization. I bring a hands-on, detail-oriented approach to every project.",
     "about.stat1.value": "15+",
     "about.stat1.label": "Years Experience",
@@ -154,7 +154,7 @@ const translations = {
     // About
     "about.label": "SOBRE MIM",
     "about.title": "Um Pouco Sobre Mim",
-    "about.bio1": "Sou Pedro Duarte, Desenvolvedor Full Stack baseado em Orlando, FL, com foco forte em construir aplicações web escaláveis e integrar soluções com inteligência artificial.",
+    "about.bio1": "Sou Pedro Duarte, Desenvolvedor Full Stack baseado em Campo Grande, MS - BR, com foco forte em construir aplicações web escaláveis e integrar soluções com inteligência artificial.",
     "about.bio2": "Com experiência em todo o ciclo de desenvolvimento — do conceito e arquitetura até o deploy e otimização. Trago uma abordagem prática e detalhista para cada projeto.",
     "about.stat1.value": "15+",
     "about.stat1.label": "Anos de Experiência",
