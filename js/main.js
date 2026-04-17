@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initNavbarScroll() {
   const navbar = document.getElementById('navbar');
-  const hero = document.getElementById('hero');
   if (!navbar) return;
 
   let isScrolled = false;
   const update = () => {
-    const threshold = hero ? hero.offsetHeight * 0.9 : 100;
+    const threshold = window.innerHeight * 0.9;
     const shouldScroll = window.scrollY > threshold;
     if (shouldScroll !== isScrolled) {
       isScrolled = shouldScroll;
@@ -228,12 +227,6 @@ function initFaqAccordion() {
   items.forEach(item => {
     const btn = item.querySelector('.faq-question');
     const answer = item.querySelector('.faq-answer');
-
-    // Set initial state for open item
-    if (item.dataset.open === 'true') {
-      answer.classList.remove('hidden');
-      answer.style.maxHeight = answer.scrollHeight + 'px';
-    }
 
     btn.addEventListener('click', () => {
       const isOpen = item.dataset.open === 'true';
