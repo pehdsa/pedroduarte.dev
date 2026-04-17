@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedro Duarte — Full Stack Developer & AI Enthusiast</title>
+  <meta name="description" content="Full Stack Developer specializing in scalable web applications, mobile apps, and AI-powered solutions. +15 years of experience turning concepts into production-ready digital products.">
+  <meta name="author" content="Pedro Duarte">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pedroduarte.dev">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pedroduarte.dev">
+  <meta property="og:title" content="Pedro Duarte — Full Stack Developer & AI Enthusiast">
+  <meta property="og:description" content="Crafting performant, scalable applications that solve real-world problems — from concept to deployment.">
+  <meta property="og:image" content="https://pedroduarte.dev/images/og-image.png">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pedro Duarte — Full Stack Developer & AI Enthusiast">
+  <meta name="twitter:description" content="Crafting performant, scalable applications that solve real-world problems — from concept to deployment.">
+  <meta name="twitter:image" content="https://pedroduarte.dev/images/og-image.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pedro Duarte",
+    "url": "https://pedroduarte.dev",
+    "jobTitle": "Full Stack Developer",
+    "description": "Full Stack Developer specializing in scalable web applications, mobile apps, and AI-powered solutions.",
+    "email": "contato@pedroduarte.dev",
+    "telephone": "(67) 99248-6520",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Campo Grande",
+      "addressRegion": "MS",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://github.com/pehdsa",
+      "https://linkedin.com/in/pehdsa"
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0A0A0F">
+
+  <!-- Fonts (non-blocking) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap"></noscript>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <!-- Google Tag Manager (deferred until window.load) -->
+  <!-- TODO: Replace GTM-XXXXXXX with your GTM container ID -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  (function () {
+    function loadGTM() {
+      if (window.__gtmLoaded) return;
+      window.__gtmLoaded = true;
+      window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = document.getElementsByTagName('script')[0];
+      var j = document.createElement('script');
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXXX';
+      f.parentNode.insertBefore(j, f);
+    }
+    if (document.readyState === 'complete') {
+      loadGTM();
+    } else {
+      window.addEventListener('load', loadGTM);
+    }
+  })();
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+<body class="bg-dark text-white font-montserrat antialiased">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO SECTION -->
+  <!-- ═══════════════════════════════════════ -->
+  <section id="hero" class="relative w-full h-screen overflow-hidden flex flex-col">
+
+    <!-- Hero Background Effects -->
+    <div class="hero-bg absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="hero-grid absolute inset-0"></div>
+      <div class="hero-streak hero-streak--blue"></div>
+      <div class="hero-streak hero-streak--indigo"></div>
+      <div class="hero-streak hero-streak--green"></div>
+      <canvas id="heroParticles" class="hero-particles absolute inset-0 w-full h-full"></canvas>
+      <div class="absolute bottom-0 left-0 right-0 h-[240px] bg-gradient-to-t from-dark to-transparent"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar" class="navbar-fixed relative z-20 w-full">
+      <nav class="max-w-container mx-auto flex items-center justify-between h-[72px] px-5 lg:px-0" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center" aria-label="Pedro Duarte - Home">
+          <img src="images/logo.svg" alt="Pedro Duarte" width="140" height="36" class="h-9 lg:h-11 w-auto">
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+          <a href="#hero" class="nav-link nav-link--active font-geist text-[13px] font-medium tracking-[0.5px] text-white transition-colors hover:text-white" data-i18n="nav.home">Home</a>
+          <a href="#services" class="nav-link font-geist text-[13px] font-medium tracking-[0.5px] text-gray-400 transition-colors hover:text-white" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" class="nav-link font-geist text-[13px] font-medium tracking-[0.5px] text-gray-400 transition-colors hover:text-white" data-i18n="nav.projects">Projects</a>
+          <a href="#about" class="nav-link font-geist text-[13px] font-medium tracking-[0.5px] text-gray-400 transition-colors hover:text-white" data-i18n="nav.about">About</a>
+          <a href="#contact" class="nav-link font-geist text-[13px] font-medium tracking-[0.5px] text-gray-400 transition-colors hover:text-white" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <!-- Nav Right -->
+        <div class="flex items-center gap-3">
+          <!-- Language Selector -->
+          <div class="relative hidden sm:block">
+            <button id="lang-trigger" class="flex items-center gap-1.5 rounded-full bg-white/[0.06] border border-white/[0.19] px-3.5 py-2 text-white text-[13px] font-montserrat font-semibold transition-colors hover:bg-white/10" aria-label="Select language">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span id="lang-text">EN</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div id="lang-dropdown" class="lang-dropdown absolute top-full right-0 mt-2 bg-dark-card border border-dark-border rounded-lg shadow-lg overflow-hidden min-w-[120px] hidden">
+              <button data-lang="en" class="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-white/5 transition">English</button>
+              <button data-lang="pt" class="w-full text-left px-4 py-2.5 text-sm text-white hover:bg-white/5 transition">Português</button>
+            </div>
+          </div>
+
+          <!-- CTA Button -->
+          <a href="#contact" data-cta="nav_get_in_touch" class="hidden md:flex items-center justify-center rounded-full bg-blue px-5 py-2.5 text-[13px] font-semibold text-white cta-primary" data-i18n="nav.cta">
+            Get in Touch
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button id="menu-toggle" class="lg:hidden flex flex-col items-center justify-center w-10 h-10 gap-1.5" aria-label="Toggle menu" aria-expanded="false">
+            <span class="menu-bar w-6 h-0.5 bg-white rounded transition-all"></span>
+            <span class="menu-bar w-6 h-0.5 bg-white rounded transition-all"></span>
+            <span class="menu-bar w-6 h-0.5 bg-white rounded transition-all"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 bg-dark/95 backdrop-blur-md flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden">
+      <button id="menu-close" class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center text-white" aria-label="Close menu">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <a href="#hero" class="mobile-nav-link font-geist text-xl text-white tracking-wide" data-i18n="nav.home">Home</a>
+      <a href="#services" class="mobile-nav-link font-geist text-xl text-gray-400 tracking-wide hover:text-white transition-colors" data-i18n="nav.skills">Skills</a>
+      <a href="#projects" class="mobile-nav-link font-geist text-xl text-gray-400 tracking-wide hover:text-white transition-colors" data-i18n="nav.projects">Projects</a>
+      <a href="#about" class="mobile-nav-link font-geist text-xl text-gray-400 tracking-wide hover:text-white transition-colors" data-i18n="nav.about">About</a>
+      <a href="#contact" class="mobile-nav-link font-geist text-xl text-gray-400 tracking-wide hover:text-white transition-colors" data-i18n="nav.contact">Contact</a>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 flex-1 flex flex-col items-center justify-center px-5 lg:px-[60px] text-center gap-6">
+      <!-- Available Badge -->
+      <div class="flex items-center gap-2 rounded-full bg-green/[0.06] border border-green/25 px-4 py-2">
+        <span class="status-dot relative flex items-center justify-center h-4 w-4 shrink-0">
+          <span class="status-dot__ping absolute h-[10px] w-[10px] rounded-full"></span>
+          <span class="status-dot__ping status-dot__ping--delayed absolute h-[10px] w-[10px] rounded-full"></span>
+          <span class="status-dot__core relative h-[10px] w-[10px] rounded-full"></span>
+        </span>
+        <span class="text-green text-[13px] font-medium font-montserrat" data-i18n="hero.badge">Available for new projects</span>
+      </div>
+
+      <!-- Caption -->
+      <span class="font-geist text-[13px] font-medium tracking-[2px] text-blue uppercase" data-i18n="hero.caption">Full Stack Developer &amp; AI Enthusiast</span>
+
+      <!-- Headline -->
+      <h1 class="text-4xl md:text-5xl lg:text-[64px] font-bold leading-[40px] md:leading-[54px] lg:leading-[70px] max-w-[973px] bg-gradient-to-b from-white to-gray-600 bg-clip-text text-transparent" data-i18n="hero.title">
+        Building Digital Experiences with Modern Tech
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-gray-500 text-base lg:text-lg leading-relaxed max-w-[640px]" data-i18n="hero.subtitle">
+        Passionate about crafting elegant web applications and integrating cutting-edge AI solutions to solve real-world problems.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-2 w-full sm:w-auto">
+        <a href="#projects" data-cta="hero_view_projects" class="w-full sm:w-auto flex items-center justify-center rounded-full bg-blue px-7 py-3.5 text-[15px] font-semibold text-white cta-primary" data-i18n="hero.btnProjects">
+          View Projects
+        </a>
+        <a href="#contact" data-cta="hero_get_in_touch" class="w-full sm:w-auto flex items-center justify-center rounded-full border border-gray-400 px-7 py-3.5 text-[15px] font-semibold text-white transition-all hover:bg-white/5" data-i18n="hero.btnContact">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="relative z-10 flex flex-col items-center gap-1.5 pb-8 animate-bounce-slow">
+      <span class="font-geist text-xs text-gray-500 tracking-[1.5px]" data-i18n="hero.scroll">Scroll</span>
+      <i data-lucide="chevron-down" class="w-4 h-4 text-gray-500"></i>
+    </div>
+  </section>
+
+  <main>
+    <!-- ═══════════════════════════════════════ -->
+    <!-- SERVICES SECTION -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="services" class="w-full bg-dark py-[100px] px-5 lg:px-[120px]">
+      <div class="max-w-container mx-auto flex flex-col gap-12">
+
+        <!-- Top Row -->
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <h2 class="text-3xl md:text-4xl lg:text-[52px] font-bold leading-[3rem] md:leading-[3rem] lg:leading-[3rem] text-white fade-up" data-i18n="services.title">
+            From idea to<br>working product.
+          </h2>
+          <p class="text-gray-500 text-base leading-relaxed lg:text-right max-w-[350px] fade-up" data-i18n="services.desc">
+            +15 years turning concepts into<br class="hidden lg:block"> production-ready digital products.
+          </p>
+        </div>
+
+        <!-- Bottom Row: Photo + Cards -->
+        <div class="flex flex-col lg:flex-row items-center gap-8 fade-up">
+          <!-- Photo -->
+          <div class="relative w-full lg:w-[420px] shrink-0">
+            <div class="rounded-2xl overflow-hidden border border-dark-border aspect-[3/4]">
+              <picture class="block w-full h-full">
+                <source type="image/avif" srcset="images/pedro_duarte_dev-420.avif 420w, images/pedro_duarte_dev-840.avif 840w" sizes="(min-width: 1024px) 420px, 100vw">
+                <source type="image/webp" srcset="images/pedro_duarte_dev-420.webp 420w, images/pedro_duarte_dev-840.webp 840w" sizes="(min-width: 1024px) 420px, 100vw">
+                <img src="images/pedro_duarte_dev-420.webp" alt="Pedro Duarte — Full Stack Developer" class="w-full h-full object-cover object-top" width="420" height="560" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="absolute inset-0 rounded-2xl shadow-[0_0_40px_rgba(0,98,255,0.12)] pointer-events-none"></div>
+          </div>
+
+          <!-- Service Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1 w-full">
+            <!-- Card 1 -->
+            <div class="service-card group rounded-[14px] bg-dark-card border border-dark-border p-6 flex items-start gap-5 h-[140px] transition-all hover:border-blue/30">
+              <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1D33] flex items-center justify-center">
+                <i data-lucide="globe" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                <h3 class="text-[17px] font-bold text-white" data-i18n="services.card1.title">Web Development</h3>
+                <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="services.card1.desc">Websites and landing pages built to generate leads, sales and product validation.</p>
+              </div>
+              <span class="font-geist text-[13px] font-medium text-[#1E3A5F40] self-start">01</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card group rounded-[14px] bg-dark-card border border-dark-border p-6 flex items-start gap-5 h-[140px] transition-all hover:border-blue/30">
+              <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1D33] flex items-center justify-center">
+                <i data-lucide="blocks" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                <h3 class="text-[17px] font-bold text-white" data-i18n="services.card2.title">Custom Systems</h3>
+                <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="services.card2.desc">Tailored systems to automate processes and scale your operations efficiently.</p>
+              </div>
+              <span class="font-geist text-[13px] font-medium text-[#1E3A5F40] self-start">02</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card group rounded-[14px] bg-dark-card border border-dark-border p-6 flex items-start gap-5 h-[140px] transition-all hover:border-blue/30">
+              <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1D33] flex items-center justify-center">
+                <i data-lucide="smartphone" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                <h3 class="text-[17px] font-bold text-white" data-i18n="services.card3.title">Mobile Apps</h3>
+                <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="services.card3.desc">Fast, intuitive apps ready for production from the first release.</p>
+              </div>
+              <span class="font-geist text-[13px] font-medium text-[#1E3A5F40] self-start">03</span>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card group rounded-[14px] bg-dark-card border border-dark-border p-6 flex items-start gap-5 h-[140px] transition-all hover:border-blue/30">
+              <div class="shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-[#1E3A5F] to-[#0F1D33] flex items-center justify-center">
+                <i data-lucide="lightbulb" class="w-6 h-6 text-white"></i>
+              </div>
+              <div class="flex flex-col gap-1.5 flex-1 min-w-0">
+                <h3 class="text-[17px] font-bold text-white" data-i18n="services.card4.title">Tech Consulting</h3>
+                <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="services.card4.desc">Technical diagnostics and roadmap to avoid months of rework.</p>
+              </div>
+              <span class="font-geist text-[13px] font-medium text-[#1E3A5F40] self-start">04</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- PROJECTS SECTION -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="projects" class="w-full bg-dark py-[100px] px-5">
+      <div class="max-w-[2500px] mx-auto flex flex-col gap-12">
+
+        <!-- Top Row -->
+        <div class="max-w-container w-full mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+          <h2 class="text-3xl md:text-4xl lg:text-[48px] font-bold leading-[3rem] md:leading-[3rem] lg:leading-[3rem] text-white fade-up" data-i18n="projects.title">
+            Projects already<br>running in the<br>real world.
+          </h2>
+          <div class="flex flex-col gap-6 max-w-[400px] fade-up">
+            <p class="text-gray-500 text-base leading-relaxed" data-i18n="projects.desc">
+              Some products I had the pleasure of building. Of course, that's not all. There's much more to come soon.
+            </p>
+            <a href="#contact" data-cta="projects_start_project" class="inline-flex items-center gap-2 rounded-full bg-blue px-7 py-3.5 text-[15px] font-semibold text-white cta-primary self-start" data-i18n="projects.cta">
+              Start a Project
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 fade-up">
+          <!-- Project 1 -->
+          <article class="project-card group relative rounded-xl overflow-hidden aspect-[4/3]">
+            <picture>
+              <source type="image/avif" srcset="images/project-dashboard-780.avif 780w, images/project-dashboard-1408.avif 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <source type="image/webp" srcset="images/project-dashboard-780.webp 780w, images/project-dashboard-1408.webp 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <img src="images/project-dashboard-780.webp" alt="Dashboard Financeiro — Financial management connected to WhatsApp" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="453" height="420" loading="lazy" decoding="async">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 flex flex-col">
+              <span class="font-geist text-[11px] font-medium tracking-[2px] text-blue uppercase">SPNDLY</span>
+              <h3 class="text-[22px] font-bold text-white leading-tight mb-1.5" data-i18n="projects.proj1.name">Dashboard Financeiro</h3>
+              <p class="text-[13px] text-gray-400 leading-[1.5]" data-i18n="projects.proj1.desc">Gestão financeira conectada ao WhatsApp com texto, áudio e imagem</p>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card group relative rounded-xl overflow-hidden aspect-[4/3]">
+            <picture>
+              <source type="image/avif" srcset="images/project-shopcar-780.avif 780w, images/project-shopcar-1408.avif 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <source type="image/webp" srcset="images/project-shopcar-780.webp 780w, images/project-shopcar-1408.webp 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <img src="images/project-shopcar-780.webp" alt="App de Revenda de Carros — Consolidated car resale marketplace" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="454" height="420" loading="lazy" decoding="async">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 flex flex-col">
+              <span class="font-geist text-[11px] font-medium tracking-[2px] text-blue uppercase">SHOPCAR</span>
+              <h3 class="text-[22px] font-bold text-white leading-tight mb-1.5" data-i18n="projects.proj2.name">App de Revenda de Carros</h3>
+              <p class="text-[13px] text-gray-400 leading-[1.5]" data-i18n="projects.proj2.desc">Aplicativo consolidado no mercado de revenda automotiva</p>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card group relative rounded-xl overflow-hidden aspect-[4/3]">
+            <picture>
+              <source type="image/avif" srcset="images/project-chatbot-780.avif 780w, images/project-chatbot-1408.avif 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <source type="image/webp" srcset="images/project-chatbot-780.webp 780w, images/project-chatbot-1408.webp 1408w" sizes="(min-width: 768px) 454px, 100vw">
+              <img src="images/project-chatbot-780.webp" alt="Chatbots com IA — Intelligent AI customer service for real estate" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" width="453" height="420" loading="lazy" decoding="async">
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-6 md:p-7 flex flex-col">
+              <span class="font-geist text-[11px] font-medium tracking-[2px] text-blue uppercase">NESTFIND AI</span>
+              <h3 class="text-[22px] font-bold text-white leading-tight mb-1.5" data-i18n="projects.proj3.name">Chatbots com IA</h3>
+              <p class="text-[13px] text-gray-400 leading-[1.5]" data-i18n="projects.proj3.desc">Atendimento inteligente com IA para imobiliárias</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- FAQ SECTION -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="faq" class="w-full bg-dark-surface py-[100px] px-5 lg:px-[120px]">
+      <div class="max-w-container mx-auto flex flex-col items-center gap-12">
+
+        <!-- Header -->
+        <div class="text-center flex flex-col items-center gap-3 fade-up">
+          <h2 class="text-3xl md:text-4xl lg:text-[44px] font-bold leading-[3rem] md:leading-[3rem] lg:leading-[3rem] text-white" data-i18n="faq.title">
+            Common Questions<br>before Getting Started
+          </h2>
+          <p class="text-gray-500 text-base" data-i18n="faq.subtitle">Quick answers to the most common questions.</p>
+        </div>
+
+        <!-- FAQ List -->
+        <div class="w-full max-w-[750px] flex flex-col fade-up">
+          <!-- FAQ Item 1 (expanded by default) -->
+          <div class="h-px bg-dark-border"></div>
+          <div class="faq-item" data-open="true">
+            <button class="faq-question flex items-center justify-between w-full py-6 text-left" aria-expanded="true">
+              <span class="text-base lg:text-[17px] font-semibold text-white pr-4" data-i18n="faq.q1">What services do you offer?</span>
+              <i data-lucide="chevron-down" class="w-[18px] h-[18px] text-gray-500 shrink-0 faq-icon transition-transform"></i>
+            </button>
+            <div class="faq-answer overflow-hidden">
+              <p class="text-[15px] text-gray-400 leading-[1.7] pb-6" data-i18n="faq.a1">
+                I offer web development services (landing pages, e-commerces, systems), mobile applications (iOS and Android), and technology consulting to help companies make the best technical decisions.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-px bg-dark-border"></div>
+          <div class="faq-item">
+            <button class="faq-question flex items-center justify-between w-full py-6 text-left" aria-expanded="false">
+              <span class="text-base lg:text-[17px] font-semibold text-white pr-4" data-i18n="faq.q2">How long does it take to develop a website/system/app?</span>
+              <i data-lucide="chevron-down" class="w-[18px] h-[18px] text-gray-500 shrink-0 faq-icon transition-transform"></i>
+            </button>
+            <div class="faq-answer overflow-hidden hidden">
+              <p class="text-[15px] text-gray-400 leading-[1.7] pb-6" data-i18n="faq.a2">
+                Development time varies depending on the project's complexity. A landing page can be delivered in 1–2 weeks, while a complete system or mobile app may take 2–4 months. I always provide a detailed timeline before starting.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-px bg-dark-border"></div>
+          <div class="faq-item">
+            <button class="faq-question flex items-center justify-between w-full py-6 text-left" aria-expanded="false">
+              <span class="text-base lg:text-[17px] font-semibold text-white pr-4" data-i18n="faq.q3">How much do your services cost?</span>
+              <i data-lucide="chevron-down" class="w-[18px] h-[18px] text-gray-500 shrink-0 faq-icon transition-transform"></i>
+            </button>
+            <div class="faq-answer overflow-hidden hidden">
+              <p class="text-[15px] text-gray-400 leading-[1.7] pb-6" data-i18n="faq.a3">
+                Each project is unique, so pricing depends on scope, features, and timeline. I provide transparent, itemized quotes after understanding your requirements. Reach out for a free consultation.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-px bg-dark-border"></div>
+          <div class="faq-item">
+            <button class="faq-question flex items-center justify-between w-full py-6 text-left" aria-expanded="false">
+              <span class="text-base lg:text-[17px] font-semibold text-white pr-4" data-i18n="faq.q4">Do you offer support after project delivery?</span>
+              <i data-lucide="chevron-down" class="w-[18px] h-[18px] text-gray-500 shrink-0 faq-icon transition-transform"></i>
+            </button>
+            <div class="faq-answer overflow-hidden hidden">
+              <p class="text-[15px] text-gray-400 leading-[1.7] pb-6" data-i18n="faq.a4">
+                Yes, I provide post-launch support and maintenance packages. This includes bug fixes, performance monitoring, and feature updates to ensure your product continues to run smoothly.
+              </p>
+            </div>
+          </div>
+
+          <div class="h-px bg-dark-border"></div>
+          <div class="faq-item">
+            <button class="faq-question flex items-center justify-between w-full py-6 text-left" aria-expanded="false">
+              <span class="text-base lg:text-[17px] font-semibold text-white pr-4" data-i18n="faq.q5">What sets your services apart from others?</span>
+              <i data-lucide="chevron-down" class="w-[18px] h-[18px] text-gray-500 shrink-0 faq-icon transition-transform"></i>
+            </button>
+            <div class="faq-answer overflow-hidden hidden">
+              <p class="text-[15px] text-gray-400 leading-[1.7] pb-6" data-i18n="faq.a5">
+                I bring 15+ years of hands-on experience, a full-stack approach (from design to deployment), and a deep commitment to performance and code quality. I focus on delivering real business value, not just code.
+              </p>
+            </div>
+          </div>
+          <div class="h-px bg-dark-border"></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="fade-up">
+          <a href="#contact" data-cta="faq_more_questions" class="inline-flex items-center gap-2 rounded-full bg-blue px-8 py-4 text-[15px] font-semibold text-white cta-primary" data-i18n="faq.cta">
+            I have more questions
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- ABOUT SECTION -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="about" class="w-full bg-dark py-20 px-5 lg:px-[120px]">
+      <div class="max-w-container mx-auto flex flex-col gap-10">
+
+        <!-- Header -->
+        <div class="text-center flex flex-col items-center gap-3 fade-up">
+          <span class="font-geist text-[13px] font-medium tracking-[3px] text-blue uppercase" data-i18n="about.label">About Me</span>
+          <h2 class="text-3xl md:text-4xl lg:text-[42px] font-bold leading-[3rem] md:leading-[3rem] lg:leading-[3rem] text-white" data-i18n="about.title">A Bit About Me</h2>
+        </div>
+
+        <!-- Bio + Stats -->
+        <div class="flex flex-col gap-5 fade-up">
+          <!-- Bio Card -->
+          <div class="rounded-2xl bg-dark-card border border-dark-border p-6 lg:p-8 flex flex-col gap-5">
+            <p class="text-base text-[#b0b0b1] leading-[1.7]" data-i18n="about.bio1">
+              I'm Pedro Duarte, a Full Stack Developer based in Orlando, FL, with a strong focus on building scalable web applications and integrating AI-powered solutions.
+            </p>
+            <p class="text-base text-gray-400 leading-[1.7]" data-i18n="about.bio2">
+              With experience across the full development lifecycle from concept and architecture to deployment and optimization. I bring a hands-on, detail-oriented approach to every project.
+            </p>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="grid grid-cols-3 gap-5">
+            <div class="rounded-xl bg-dark-card border border-dark-border p-6 flex flex-col items-center gap-1">
+              <span class="text-4xl font-bold text-blue" data-i18n="about.stat1.value">15+</span>
+              <span class="font-geist text-xs text-gray-500" data-i18n="about.stat1.label">Years Experience</span>
+            </div>
+            <div class="rounded-xl bg-dark-card border border-dark-border p-6 flex flex-col items-center gap-1">
+              <span class="text-4xl font-bold text-blue" data-i18n="about.stat2.value">50+</span>
+              <span class="font-geist text-xs text-gray-500" data-i18n="about.stat2.label">Projects Completed</span>
+            </div>
+            <div class="rounded-xl bg-dark-card border border-dark-border p-6 flex flex-col items-center gap-1">
+              <span class="text-4xl font-bold text-blue" data-i18n="about.stat3.value">12+</span>
+              <span class="font-geist text-xs text-gray-500" data-i18n="about.stat3.label">Technologies Mastered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Header -->
+        <div class="flex items-center gap-4 fade-up">
+          <div class="flex-1 h-px bg-dark-border"></div>
+          <h3 class="text-2xl font-bold text-white" data-i18n="about.expTitle">Experience</h3>
+          <div class="flex-1 h-px bg-dark-border"></div>
+        </div>
+
+        <!-- Experience Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 fade-up">
+          <div class="rounded-xl bg-dark-card border border-dark-border px-7 py-6 flex flex-col gap-2">
+            <h4 class="text-base font-semibold text-white" data-i18n="about.exp1.title">Senior Full Stack Developer</h4>
+            <span class="font-geist text-xs text-blue" data-i18n="about.exp1.company">Mutant &bull; 2021 – 2025</span>
+            <p class="text-[13px] text-gray-400 leading-relaxed" data-i18n="about.exp1.desc">Building scalable web apps, AI integrations, and real estate platforms for US-based clients.</p>
+          </div>
+          <div class="rounded-xl bg-dark-card border border-dark-border px-7 py-6 flex flex-col gap-2">
+            <h4 class="text-base font-semibold text-white" data-i18n="about.exp2.title">Full Stack Developer</h4>
+            <span class="font-geist text-xs text-blue" data-i18n="about.exp2.company">Mil Tec &bull; 2021 – 2021</span>
+            <p class="text-[13px] text-gray-400 leading-relaxed" data-i18n="about.exp2.desc">Developed modern React applications with TypeScript, implementing responsive UIs and REST API integrations.</p>
+          </div>
+          <div class="rounded-xl bg-dark-card border border-dark-border px-7 py-6 flex flex-col gap-2">
+            <h4 class="text-base font-semibold text-white" data-i18n="about.exp3.title">Full Stack Developer</h4>
+            <span class="font-geist text-xs text-blue" data-i18n="about.exp3.company">Infoimóveis Classificados &bull; 2018 – 2021</span>
+            <p class="text-[13px] text-gray-400 leading-relaxed" data-i18n="about.exp3.desc">Developer at ShopCar/Infoimóveis. Passionate about Javascript, ReactJS, React Native, NodeJS and the entire ecosystem around these technologies.</p>
+          </div>
+          <div class="rounded-xl bg-dark-card border border-dark-border px-7 py-6 flex flex-col gap-2">
+            <h4 class="text-base font-semibold text-white" data-i18n="about.exp4.title">Front-end Developer</h4>
+            <span class="font-geist text-xs text-blue" data-i18n="about.exp4.company">Tag3 &bull; 2010 – 2018</span>
+            <p class="text-[13px] text-gray-400 leading-relaxed" data-i18n="about.exp4.desc">Front-end development focused on responsive interfaces and user experience.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!-- CONTACT SECTION -->
+    <!-- ═══════════════════════════════════════ -->
+    <section id="contact" class="w-full bg-dark-surface py-[100px] px-5 lg:px-[120px]">
+      <div class="max-w-container mx-auto flex flex-col items-center gap-12">
+
+        <!-- Header -->
+        <div class="text-center flex flex-col items-center gap-3 fade-up">
+          <span class="font-geist text-[13px] font-medium tracking-[3px] text-blue uppercase" data-i18n="contact.label">Get in Touch</span>
+          <h2 class="text-3xl md:text-4xl lg:text-[42px] font-bold leading-[2.0] text-white" data-i18n="contact.title">Let's Work Together</h2>
+        </div>
+
+        <p class="text-gray-400 text-base leading-[1.7] text-center max-w-[600px] fade-up" data-i18n="contact.desc">
+          Have a project in mind or want to collaborate? Feel free to reach out.<br>I'm always open to new opportunities and interesting ideas.
+        </p>
+
+        <!-- Contact Cards -->
+        <div class="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 w-full fade-up">
+          <a href="mailto:contato@pedroduarte.dev" data-cta="contact_email" class="flex items-center gap-3 rounded-lg bg-dark-card border border-dark-border px-7 py-5 transition-all hover:border-blue/30">
+            <i data-lucide="mail" class="w-5 h-5 text-blue"></i>
+            <span class="text-sm text-white">contato@pedroduarte.dev</span>
+          </a>
+          <a href="https://linkedin.com/in/pehdsa" target="_blank" rel="noopener noreferrer" data-cta="contact_linkedin" class="flex items-center gap-3 rounded-lg bg-dark-card border border-dark-border px-7 py-5 transition-all hover:border-blue/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="text-sm text-white">linkedin.com/in/pehdsa</span>
+          </a>
+          <a href="https://instagram.com/pehdsa" target="_blank" rel="noopener noreferrer" data-cta="contact_instagram" class="flex items-center gap-3 rounded-lg bg-dark-card border border-dark-border px-7 py-5 transition-all hover:border-blue/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            <span class="text-sm text-white">instagram.com/pehdsa</span>
+          </a>
+        </div>
+
+        <!-- Row 2: Location + Phone -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 fade-up">
+          <div class="flex items-center gap-2 rounded-lg bg-dark-card border border-dark-border px-7 py-5">
+            <i data-lucide="map-pin" class="w-5 h-5 text-blue"></i>
+            <span class="text-sm text-white">Campo Grande, MS - BRA</span>
+          </div>
+          <a id="whatsapp-link" href="https://wa.me/5567992486520" target="_blank" rel="noopener noreferrer" data-phone="5567992486520" data-cta="contact_whatsapp" class="flex items-center gap-2 rounded-lg bg-dark-card border border-dark-border px-7 py-5 transition-all hover:border-blue/30">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="text-blue" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.82 11.82 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.82 11.82 0 0 0 20.465 3.488"/></svg>
+            <span class="text-sm text-white">(67) 99248-6520</span>
+          </a>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="fade-up">
+          <a href="mailto:contato@pedroduarte.dev" data-cta="contact_send_message" class="inline-flex items-center gap-2 rounded-full bg-blue px-10 py-4 text-[15px] font-semibold text-white cta-primary" data-i18n="contact.cta">
+            Send Me a Message
+            <i data-lucide="arrow-right" class="w-[18px] h-[18px]"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer class="w-full bg-dark-footer py-8 px-5 lg:px-[120px]">
+    <div class="max-w-container mx-auto flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
+      <p class="text-[13px] text-gray-400" data-i18n="footer.copy">&copy; 2026 Pedro Duarte. All rights reserved.</p>
+      <div class="flex items-center gap-5">
+        <a href="https://github.com/pehdsa" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-cta="footer_github" class="text-gray-400 hover:text-white transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/pehdsa" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cta="footer_linkedin" class="text-gray-400 hover:text-white transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/pehdsa" target="_blank" rel="noopener noreferrer" aria-label="Instagram" data-cta="footer_instagram" class="text-gray-400 hover:text-white transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (deferred) -->
+  <script src="js/vendor/lucide.min.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

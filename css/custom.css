@@ -1,0 +1,360 @@
+/* ═══════════════════════════════════════ */
+/* HERO BACKGROUND EFFECTS               */
+/* ═══════════════════════════════════════ */
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 90% 90% at 50% 45%, transparent 0%, transparent 30%, black 85%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 90% at 50% 45%, transparent 0%, transparent 30%, black 85%);
+}
+
+@media (max-width: 768px) {
+  .hero-grid {
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 120% 120% at 50% 30%, rgba(0,98,255,0.13) 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 120% 120% at 50% 30%, rgba(0,98,255,0.13) 0%, transparent 100%);
+  }
+}
+
+.hero-streak {
+  position: absolute;
+  border-radius: 999px;
+}
+
+.hero-streak--blue {
+  width: 900px;
+  height: 4px;
+  top: 280px;
+  left: 0;
+  background: #0062FF;
+  opacity: 0.5;
+  filter: blur(40px);
+  transform: rotate(8deg);
+}
+
+.hero-streak--indigo {
+  width: 1100px;
+  height: 3px;
+  top: 420px;
+  left: 400px;
+  background: #4F46E5;
+  opacity: 0.45;
+  filter: blur(50px);
+  transform: rotate(-6deg);
+}
+
+.hero-streak--green {
+  width: 700px;
+  height: 5px;
+  top: 520px;
+  left: 100px;
+  background: #10B981;
+  opacity: 0.35;
+  filter: blur(45px);
+  transform: rotate(10deg);
+}
+
+@media (max-width: 768px) {
+  .hero-streak--blue {
+    width: 200px;
+    height: 80px;
+    top: 150px;
+    left: 50px;
+    filter: blur(60px);
+    opacity: 0.06;
+    transform: rotate(15deg);
+    border-radius: 40px;
+  }
+  .hero-streak--indigo {
+    width: 160px;
+    height: 60px;
+    top: 400px;
+    left: 180px;
+    filter: blur(50px);
+    opacity: 0.05;
+    transform: rotate(-20deg);
+    border-radius: 30px;
+  }
+  .hero-streak--green {
+    display: none;
+  }
+}
+
+/* ═══════════════════════════════════════ */
+/* SMOOTH SCROLL                          */
+/* ═══════════════════════════════════════ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ═══════════════════════════════════════ */
+/* SCROLL ANIMATIONS                      */
+/* ═══════════════════════════════════════ */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-up.visible {
+  animation: fadeUpIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeUpIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════════════════════════════════ */
+/* CTA PRIMARY (shared hover animation)    */
+/* ═══════════════════════════════════════ */
+
+.cta-primary {
+  box-shadow: 0 4px 24px rgba(0, 98, 255, 0.4);
+  transition: box-shadow .4s cubic-bezier(.22, 1, .36, 1),
+              transform .4s cubic-bezier(.22, 1, .36, 1),
+              background-color .3s ease;
+}
+
+.cta-primary:hover {
+  box-shadow: 0 4px 32px rgba(0, 98, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* ═══════════════════════════════════════ */
+/* BOUNCE ANIMATION                       */
+/* ═══════════════════════════════════════ */
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════ */
+/* MOBILE MENU                            */
+/* ═══════════════════════════════════════ */
+
+#mobile-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#menu-toggle.active .menu-bar:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+
+#menu-toggle.active .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle.active .menu-bar:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* ═══════════════════════════════════════ */
+/* FAQ ACCORDION                          */
+/* ═══════════════════════════════════════ */
+
+.faq-item .faq-answer {
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.faq-item[data-open="true"] .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item[data-open="true"] .faq-answer.hidden {
+  display: block;
+}
+
+.faq-item[data-open="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* ═══════════════════════════════════════ */
+/* SERVICE CARDS HOVER                    */
+/* ═══════════════════════════════════════ */
+
+.service-card {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ═══════════════════════════════════════ */
+/* PROJECT CARDS                          */
+/* ═══════════════════════════════════════ */
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid rgba(30, 30, 46, 0.5);
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+.project-card:hover::after {
+  border-color: rgba(0, 98, 255, 0.3);
+}
+
+/* ═══════════════════════════════════════ */
+/* NAV LINK ACTIVE INDICATOR              */
+/* ═══════════════════════════════════════ */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #0062FF;
+}
+
+/* ═══════════════════════════════════════ */
+/* SELECTION                              */
+/* ═══════════════════════════════════════ */
+
+::selection {
+  background: rgba(0, 98, 255, 0.3);
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════ */
+/* SCROLLBAR                              */
+/* ═══════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E1E2E;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E2E3E;
+}
+
+/* ═══════════════════════════════════════ */
+/* NAVBAR (fixed, slide-in, scroll blur)   */
+/* ═══════════════════════════════════════ */
+
+.navbar-fixed {
+  transition: background-color .3s ease,
+              backdrop-filter .3s ease,
+              border-color .3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+/* Desktop: becomes fixed with slide-in + blur after leaving hero */
+@media (min-width: 1024px) {
+  .navbar-fixed.is-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: rgba(30, 30, 46, 0.6);
+    animation: navSlideDown .45s cubic-bezier(.25, 1, .5, 1);
+  }
+}
+
+/* Mobile: always fixed at top with blur */
+@media (max-width: 1023px) {
+  .navbar-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: rgba(10, 10, 15, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom-color: rgba(30, 30, 46, 0.6);
+  }
+}
+
+@keyframes navSlideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+/* ═══════════════════════════════════════ */
+/* STATUS DOT (available indicator)        */
+/* ═══════════════════════════════════════ */
+
+.status-dot__ping {
+  background-color: #10B981;
+  animation: status-ping 3s ease-in-out infinite;
+}
+
+.status-dot__ping--delayed {
+  background-color: rgba(16, 185, 129, 0.8);
+  animation-delay: 0.4s;
+}
+
+.status-dot__core {
+  animation: status-blink 3s ease-in-out infinite;
+}
+
+@keyframes status-ping {
+  0%, 15% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  60% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes status-blink {
+  0%, 10% {
+    background-color: #6b7280;
+    box-shadow: 0 0 0 0 transparent;
+  }
+  25%, 75% {
+    background-color: #10B981;
+    box-shadow: 0 0 6px 1px rgba(16, 185, 129, 0.4), 0 0 16px 3px rgba(16, 185, 129, 0.15);
+  }
+  90%, 100% {
+    background-color: #6b7280;
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
