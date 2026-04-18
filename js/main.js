@@ -210,6 +210,10 @@ function initMobileMenu() {
     link.addEventListener('click', closeMenu);
   });
 
+  menu.querySelectorAll('.mobile-lang-btn').forEach(btn => {
+    btn.addEventListener('click', closeMenu);
+  });
+
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && menu.classList.contains('active')) {
       closeMenu();
