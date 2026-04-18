@@ -87,6 +87,12 @@
 /* SMOOTH SCROLL                          */
 /* ═══════════════════════════════════════ */
 
+html, body {
+  overflow-x: hidden;
+  overflow-x: clip;
+  overscroll-behavior-y: contain;
+}
+
 html {
   scroll-behavior: smooth;
 }
